@@ -1,7 +1,7 @@
 import {JSDOM} from "jsdom";
 
 const chrome = require(`chrome-aws-lambda`);
-const puppeteer = require(`puppeteer`);
+const puppeteer = require(`puppeteer-core`);
 
 export default async (req, res) => {
   const browser = await puppeteer.launch(
