@@ -5,7 +5,7 @@ const puppeteer = require(`puppeteer`);
 
 export default async (req, res) => {
   const browser = await puppeteer.launch(
-      process.env.IS_PROD === true
+      process.env.IS_PROD === `true`
         ? {
           args: chrome.args,
           executablePath: await chrome.executablePath,
