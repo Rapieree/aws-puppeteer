@@ -25,6 +25,7 @@ export default async (req, res) => {
     const page = await browser.newPage();
     await page.setUserAgent(`Opera/9.80 (J2ME/MIDP; Opera Mini/5.1.21214/28.2725; U; ru) Presto/2.8.119 Version/11.10`);
     await page.goto(decodeURIComponent(url));
+    await page.waitForSelector(decodeURIComponent(selector));
 
     let content = await page.content();
     const jsdom = new JSDOM(content);
