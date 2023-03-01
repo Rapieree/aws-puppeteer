@@ -1,0 +1,36 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "commonjs": true,
+    "jest": false
+  },
+
+  "extends": ["next/core-web-vitals", "htmlacademy/es6", "plugin:react/recommended", "plugin:jest/recommended"],
+
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+
+  "plugins": ["react", "jest"],
+
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "max-nested-callbacks": "warn",
+    "import/order": ["error", {
+      "alphabetize": {"order": "asc", "caseInsensitive": true},
+      "groups": ["builtin", "external", "parent", "sibling", "index"]
+    }]
+  },
+
+  "settings": {
+    "react": {
+      "version": "17"
+    }
+  }
+}
